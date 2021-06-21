@@ -24,6 +24,7 @@ function useLocalStorageState(key, defaultValue='', {
     }
 
     prevKeyRef.current = key;
+    
     window.localStorage.setItem(key, serialize(state));
   }, [key, serialize, state]);
 
